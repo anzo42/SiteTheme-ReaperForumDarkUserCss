@@ -1,0 +1,284 @@
+/* ==UserStyle==
+@name           Reaper forum
+@namespace      userstyles.world/user/frantick
+@version        1.1
+@description    Dark style for Cockos/Reaper forum
+@author         Frantick
+@preprocessor stylus
+
+@var range selectedFontSize "Font size" [10, 10, 24, 1,]
+@var color mainBackground "Main background" "#282828"
+@var color secondBackground "Second background" "#323232"
+@var color mainFontColor "Main font color" "#8AA68A"
+@var color mainLinkFontColor "Link main color" "#AFC8BF"
+@var color secondLinkFontColor "Link hover color" "#809D6E"
+ 
+==/UserStyle== */
+@-moz-document domain("forum.cockos.com")
+{
+    :root
+    {
+        --fontSizePx: selectedFontSize + 1px;
+        --fontSizePt: selectedFontSize * 1pt;
+        --backgroundColorMain: mainBackground;
+        --backgroundColorAlt: secondBackground;
+        --fontColorMain: mainFontColor;
+        --fontColorLinkMain: mainLinkFontColor;
+        --fontColorLinkAlt: secondLinkFontColor;
+    }
+
+    body
+    {
+        background: #222222;
+        color: var(--fontColorMain);
+        font-size: var(--fontSizePt);
+    }
+    td, th, p, li
+    {
+        font-size: var(--fontSizePt) !important;
+    }
+    .wysiwyg
+    {
+        font: var(--fontSizePt) verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+    }
+    textarea, .bginput
+    {
+        background-color: var(--backgroundColorAlt);
+        color: var(--fontColorMain);
+        font-size: var(--fontSizePt);
+        filter: contrast(90%);
+        border: 1px solid;
+    }
+    .bginput option, .bginput optgroup
+    {
+        font-size: var(--fontSizePt);
+    }
+    .button
+    {
+        font-size: var(--fontSizePx);
+        background-color: var(--backgroundColorAlt);
+        border: 1px solid;
+        color: var(--fontColorMain);
+        padding: 4px 8px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+        filter: contrast(90%);
+    }
+    select
+    {
+        background-color: var(--backgroundColorAlt);
+        color: var(--fontColorMain);
+        font-size: var(--fontSizePx);
+        filter: contrast(90%);
+        border: 1px solid;
+    }
+    option, optgroup
+    {
+        font-size: var(--fontSizePx);
+    }
+    .smallfont
+    {
+        font-size: var(--fontSizePx);
+    }
+    .navbar
+    {
+        font: var(--fontSizePx) verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+    }
+    .bigusername
+    {
+        font-size: calc(var(--fontSizePt) + 4pt);
+    }
+
+    /***********************/
+    a:link, body_alink
+    {
+        color: var(--fontColorLinkMain);
+    }
+    a:visited, body_avisited
+    {
+        color: var(--fontColorLinkMain);
+    }
+    a:hover, a:active, body_ahover
+    {
+        color: var(--fontColorLinkAlt);
+        text-decoration: underline;
+    }
+
+    /***********************/
+    .alt1, .alt1Active
+    {
+        background: var(--backgroundColorMain);
+        color: var(--fontColorMain);
+    }
+
+    .alt1 a:link, .alt1_alink, .alt1Active a:link, .alt1Active_alink
+    {
+        color: var(--fontColorLinkMain);
+        text-decoration: underline;
+    }
+    .alt1 a:visited, .alt1_avisited, .alt1Active a:visited, .alt1Active_avisited
+    {
+        color: var(--fontColorLinkMain);
+        text-decoration: underline;
+    }
+    .alt1 a:hover, .alt1 a:active, .alt1_ahover, .alt1Active a:hover, .alt1Active a:active, .alt1Active_ahover
+    {
+        color: var(--fontColorLinkAlt);
+        text-decoration: underline;
+    }
+
+    /***********************/
+    .alt2
+    {
+        background: var(--backgroundColorMain);
+        color: var(--fontColorMain);
+    }
+
+    .alt2 a:link, .alt2_alink, .alt2Active a:link, .alt2Active_alink
+    {
+        color: var(--fontColorLinkMain);
+        text-decoration: underline;
+    }
+    .alt2 a:visited, .alt2_avisited, .alt2Active a:visited, .alt2Active_avisited
+    {
+        color: var(--fontColorLinkMain);
+        text-decoration: underline;
+    }
+    .alt2 a:hover, .alt2 a:active, .alt2_ahover, .alt2Active a:hover, .alt2Active a:active, .alt2Active_ahover
+    {
+        color: var(--fontColorLinkAlt);
+        text-decoration: underline;
+    }
+
+    /***********************/
+    .page
+    {
+        background: var(--backgroundColorMain);
+        color: var(--fontColorMain);
+    }
+    .page a:link, .page_alink
+    {
+        text-decoration: none;
+    }
+    .page a:visited, .page_avisited
+    {
+        text-decoration: underline;
+    }
+    .page a:hover, .page a:active, .page_ahover
+    {
+        text-decoration: underline;
+    }
+
+    /***********************/
+    .panel
+    {
+        background: var(--backgroundColor);
+        color: var(--fontColorMain);
+        border: 1px solid;
+    }
+    .panel a:link, .panel_alink
+    {
+        color: var(--fontColorLinkMain);
+    }
+    .panel a:visited, .panel_avisited
+    {
+        color: var(--fontColorLinkMain);
+    }
+    .panel a:hover, .panel a:active, .panel_ahover
+    {
+        color: var(--fontColorLinkAlt);
+    }
+    .panelsurround
+    {
+        background: var(--backgroundColorMain);
+        color: var(--fontColorMain);
+    }
+    legend
+    {
+        color: var(--fontColorMain);
+        font-size: var(--fontSizePx);
+    }
+    .fieldset
+    {
+        border: 1px solid;
+    }
+
+    /***********************/
+    .thead
+    {
+        background: var(--backgroundColorAlt);
+        color: var(--fontColorLinkMain);
+        font-size: var(--fontSizePx);
+    }
+    .thead a:link, .thead_alink
+    {
+        color: var(--fontColorLinkMain);
+        text-decoration: none;
+    }
+    .thead a:visited, .thead_avisited
+    {
+        color: var(--fontColorLinkMain);
+    }
+    .thead a:hover, .thead a:active, .thead_ahover
+    {
+        color: var(--fontColorLinkMain);
+    }
+
+    /***********************/
+    .tcat
+    {
+        background: var(--backgroundColorMain);
+        color: var(--fontColorMain);
+        font-size: var(--fontSizePt);
+    }
+    .tcat a:link, .tcat_alink
+    {
+        color: var(--fontColorLinkMain);
+        text-decoration: none;
+    }
+    .tcat a:visited, .tcat_avisited
+    {
+        color: var(--fontColorLinkMain);
+        text-decoration: underline;
+    }
+    .tcat a:hover, .tcat a:active, .tcat_ahover
+    {
+        color: var(--fontColorLinkAlt);
+        text-decoration: underline;
+    }
+
+    /***********************/
+    .tborder
+    {
+        background: var(--backgroundColorAlt);
+    }
+
+    /***********************/
+    .tfoot
+    {
+        background: var(--backgroundColorAlt);
+        color: var(--fontColorMain);
+    }
+    .tfoot a:link, .tfoot_alink
+    {
+        color: var(--fontColorLinkMain);
+        text-decoration: none;
+    }
+    .tfoot a:visited, .tfoot_avisited
+    {
+        color: var(--fontColorLinkMain);
+        text-decoration: underline;
+    }
+    .tfoot a:hover, .tfoot a:active, .tfoot_ahover
+    {
+        color: var(--fontColorLinkAlt);
+        text-decoration: underline;
+    }
+
+    /***********************/
+    .time
+    {
+        color: var(--fontColorMain);
+    }
+}
